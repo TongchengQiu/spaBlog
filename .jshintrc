@@ -8,7 +8,7 @@
   "esnext": true,
   "immed": true,
   "indent": 2,
-  "maxlen": 200,
+  "maxlen": 500,
   "newcap": true,
   "noarg": true,
   "undef": true,

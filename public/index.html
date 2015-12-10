@@ -2,7 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>bolg</title>
+  <script type="text/javascript">
+    var BusuanziCallback = function(obj) {
+      pv = obj.page_pv;
+      var getPv = document.getElementById('getpv');
+      var getPvP = getpv.parentNode;
+      getPvP.removeChild(getPv);
+    }
+  </script>
+  <script id="getpv" type="text/javascript" src="http://service.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback"></script>
 </head>
 <body>
   <div id="root"></div>

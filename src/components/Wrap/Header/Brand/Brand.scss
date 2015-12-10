@@ -1,0 +1,14 @@
+@import "../../../../assets/style/main";
+.brand {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  a {
+    color: #fff;
+    font-size: 40px;
+  }
+  a:hover {
+    color: $main-color;
+  }
+}

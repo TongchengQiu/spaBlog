@@ -3,8 +3,6 @@ import { createHistory, useBasename } from 'history';
 import { Router } from 'react-router';
 import { render } from 'react-dom';
 
-let Home = require('./components/Home/Home.jsx');
-
 const historyConfig = useBasename(createHistory)({
   basename: '/'
 });
@@ -28,7 +26,15 @@ const routeConfig = [
     },
     getChildRoutes(location, cb) {
       require.ensure([], function(require) {
-        cb(null, require('./routes/index'));
+        cb(null, require('./routes'));
+      });
+    }
+  },
+  {
+    path: '*',
+    getComponents(location, cb) {
+      require.ensure([], function(require) {
+        cb(null, require('./components/NotFound/NotFound'));
       });
     }
   }

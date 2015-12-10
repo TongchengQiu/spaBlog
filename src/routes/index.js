@@ -1,6 +1,10 @@
 'use strict';
 
 module.exports = [
-  require('./home.js'),
-  require('./about.js'),
+  require('./home'),
+  require('./about'),
+  require('./categories'),
+  require('./tags'),
+  require('./archives'),
+  require('./post')
 ];

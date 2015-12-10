@@ -1,0 +1,36 @@
+nav.nav {
+  height: 35px;
+  padding: 30px 80px 0 0;
+  ul {
+    height: 35px;
+    padding: 0;
+    float: right;
+    li {
+      list-style: none;
+      float: left;
+      a {
+        display: block;
+        width: 50px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+      }
+      a.active,
+      a:hover {
+        background-color: rgba(0, 0, 0, .8);
+      }
+    }
+  }
+  ul:hover {
+    li {
+      a.active {
+        background: none;
+      }
+      a:hover {
+        background-color: rgba(0, 0, 0, .8);
+      }
+    }
+  }
+}
