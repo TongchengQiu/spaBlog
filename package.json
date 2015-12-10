@@ -1,7 +1,7 @@
 {
-  "name": "webapp",
+  "name": "spaBlog",
   "version": "1.0.0",
-  "description": "webapp to test webpack demo",
+  "description": "single page web application of blog",
   "main": " ",
   "scripts": {
     "build": "webpack --progress --colors --watch",
@@ -10,10 +10,12 @@
   },
   "keywords": [
     "webpack",
-    "react"
+    "react",
+    "spa",
+    "blog"
   ],
   "author": "TongchengQiu",
-  "repository": "https://github.com/TongchengQiu/webapp.git",
+  "repository": "https://github.com/TongchengQiu/spaBlog.git",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
