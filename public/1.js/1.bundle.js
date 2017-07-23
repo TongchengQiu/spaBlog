@@ -1,7 +1,82 @@
-webpackJsonp([1,5],{
+webpackJsonp([1,10],{
+
+/***/ 213:
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	
+	__webpack_require__(214);
+	
+	var Header = __webpack_require__(218);
+	var Footer = __webpack_require__(228);
+	
+	var Wrap = React.createClass({
+	  displayName: 'Wrap',
+	
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'wrap' },
+	      React.createElement(Header, null),
+	      React.createElement(
+	        'div',
+	        { className: 'main' },
+	        this.props.children
+	      ),
+	      React.createElement(Footer, null)
+	    );
+	  }
+	});
+	
+	module.exports = Wrap;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+
+/***/ 214:
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(215);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(217)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/index.js!./Wrap.scss", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/index.js!./Wrap.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
 
 /***/ 215:
-/***/ function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(216)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".wrap {\n  width: 100%;\n  height: auto; }\n  .wrap .main {\n    width: 100%;\n    height: 1000px; }\n", ""]);
+	
+	// exports
+
+
+/***/ }),
+
+/***/ 216:
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -55,10 +130,10 @@ webpackJsonp([1,5],{
 	};
 
 
-/***/ },
+/***/ }),
 
-/***/ 216:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 217:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -73,7 +148,7 @@ webpackJsonp([1,5],{
 			};
 		},
 		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 		}),
 		getHeadElement = memoize(function () {
 			return document.head || document.getElementsByTagName("head")[0];
@@ -273,7 +348,6 @@ webpackJsonp([1,5],{
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-		var sourceMap = obj.sourceMap;
 	
 		if(media) {
 			styleElement.setAttribute("media", media)
@@ -291,7 +365,6 @@ webpackJsonp([1,5],{
 	
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
-		var media = obj.media;
 		var sourceMap = obj.sourceMap;
 	
 		if(sourceMap) {
@@ -310,90 +383,19 @@ webpackJsonp([1,5],{
 	}
 
 
-/***/ },
-
-/***/ 217:
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
-	
-	__webpack_require__(218);
-	
-	var Header = __webpack_require__(220);
-	var Footer = __webpack_require__(235);
-	
-	var Wrap = React.createClass({
-	  displayName: 'Wrap',
-	
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      { className: 'wrap' },
-	      React.createElement(Header, null),
-	      this.props.children,
-	      React.createElement(Footer, null)
-	    );
-	  }
-	});
-	
-	module.exports = Wrap;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
+/***/ }),
 
 /***/ 218:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(219);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(216)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Wrap.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Wrap.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 219:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(215)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".wrap {\n  width: 100%;\n  height: auto; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-
-/***/ 220:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
 	var _reactRouter = __webpack_require__(188);
 	
-	__webpack_require__(221);
+	__webpack_require__(219);
 	
-	var Nav = __webpack_require__(223);
-	var Brand = __webpack_require__(232);
+	var Nav = __webpack_require__(222);
+	var Brand = __webpack_require__(225);
 	
 	var Header = React.createClass({
 	  displayName: 'Header',
@@ -411,25 +413,25 @@ webpackJsonp([1,5],{
 	module.exports = Header;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ },
+/***/ }),
 
-/***/ 221:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 219:
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(222);
+	var content = __webpack_require__(220);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(216)(content, {});
+	var update = __webpack_require__(217)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Header.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Header.scss");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/index.js!./Header.scss", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/index.js!./Header.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -438,31 +440,38 @@ webpackJsonp([1,5],{
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 222:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 220:
+/***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(215)();
+	exports = module.exports = __webpack_require__(216)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".header {\n  width: 100%;\n  height: 400px;\n  position: relative;\n  background: url(" + __webpack_require__(231) + ") no-repeat;\n  background-size: 100% auto;\n  background-position: center top; }\n", ""]);
+	exports.push([module.id, ".header {\n  width: 100%;\n  height: 400px;\n  position: relative;\n  background: url(" + __webpack_require__(221) + ") no-repeat;\n  background-size: 100% auto;\n  background-position: center top; }\n", ""]);
 	
 	// exports
 
 
-/***/ },
+/***/ }),
 
-/***/ 223:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 221:
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/banner.jpg";
+
+/***/ }),
+
+/***/ 222:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
 	var _reactRouter = __webpack_require__(188);
 	
-	__webpack_require__(224);
+	__webpack_require__(223);
 	
 	var Nav = React.createClass({
 	  displayName: 'Nav',
@@ -480,7 +489,7 @@ webpackJsonp([1,5],{
 	          React.createElement(
 	            _reactRouter.IndexLink,
 	            { to: '/', activeClassName: 'active' },
-	            '首页'
+	            '\u9996\u9875'
 	          )
 	        ),
 	        React.createElement(
@@ -489,7 +498,7 @@ webpackJsonp([1,5],{
 	          React.createElement(
 	            _reactRouter.Link,
 	            { to: '/categories', activeClassName: 'active' },
-	            '分类'
+	            '\u5206\u7C7B'
 	          )
 	        ),
 	        React.createElement(
@@ -498,7 +507,7 @@ webpackJsonp([1,5],{
 	          React.createElement(
 	            _reactRouter.Link,
 	            { to: '/archives', activeClassName: 'active' },
-	            '归档'
+	            '\u5F52\u6863'
 	          )
 	        ),
 	        React.createElement(
@@ -507,7 +516,7 @@ webpackJsonp([1,5],{
 	          React.createElement(
 	            _reactRouter.Link,
 	            { to: '/tags', activeClassName: 'active' },
-	            '标签'
+	            '\u6807\u7B7E'
 	          )
 	        ),
 	        React.createElement(
@@ -516,7 +525,7 @@ webpackJsonp([1,5],{
 	          React.createElement(
 	            _reactRouter.Link,
 	            { to: '/about', activeClassName: 'active' },
-	            '关于'
+	            '\u5173\u4E8E'
 	          )
 	        )
 	      )
@@ -527,25 +536,25 @@ webpackJsonp([1,5],{
 	module.exports = Nav;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ },
+/***/ }),
 
-/***/ 224:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 223:
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(225);
+	var content = __webpack_require__(224);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(216)(content, {});
+	var update = __webpack_require__(217)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./Nav.scss", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./Nav.scss");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/sass-loader/index.js!./Nav.scss", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/sass-loader/index.js!./Nav.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -554,12 +563,12 @@ webpackJsonp([1,5],{
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 225:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 224:
+/***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(215)();
+	exports = module.exports = __webpack_require__(216)();
 	// imports
 	
 	
@@ -569,23 +578,16 @@ webpackJsonp([1,5],{
 	// exports
 
 
-/***/ },
+/***/ }),
 
-/***/ 231:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "images/banner.jpg";
-
-/***/ },
-
-/***/ 232:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 225:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
 	var _reactRouter = __webpack_require__(188);
 	
-	__webpack_require__(233);
+	__webpack_require__(226);
 	
 	var Brand = React.createClass({
 	  displayName: 'Brand',
@@ -606,25 +608,25 @@ webpackJsonp([1,5],{
 	module.exports = Brand;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ },
+/***/ }),
 
-/***/ 233:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 226:
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(234);
+	var content = __webpack_require__(227);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(216)(content, {});
+	var update = __webpack_require__(217)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./Brand.scss", function() {
-				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./Brand.scss");
+			module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/sass-loader/index.js!./Brand.scss", function() {
+				var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/sass-loader/index.js!./Brand.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -633,12 +635,12 @@ webpackJsonp([1,5],{
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 234:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 227:
+/***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(215)();
+	exports = module.exports = __webpack_require__(216)();
 	// imports
 	
 	
@@ -648,18 +650,18 @@ webpackJsonp([1,5],{
 	// exports
 
 
-/***/ },
+/***/ }),
 
-/***/ 235:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 228:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
 	var _reactRouter = __webpack_require__(188);
 	
-	__webpack_require__(236);
+	__webpack_require__(229);
 	
-	var utils = __webpack_require__(238);
+	var utils = __webpack_require__(231);
 	var timeDiff = utils.timeDiff;
 	
 	var Footer = React.createClass({
@@ -681,34 +683,34 @@ webpackJsonp([1,5],{
 	      React.createElement(
 	        'div',
 	        { className: 'copyright' },
-	        '©   2015',
+	        '\xA9 \xA0 2015',
 	        React.createElement(
 	          'span',
 	          { className: 'heart' },
-	          '  ♡  '
+	          '\xA0\xA0\u2661\xA0\xA0'
 	        ),
 	        React.createElement(
 	          'span',
 	          { className: 'name' },
-	          '阿城'
+	          '\u963F\u57CE'
 	        )
 	      ),
 	      React.createElement(
 	        'div',
 	        { className: 'showDays' },
-	        '本站已运行 ',
+	        '\u672C\u7AD9\u5DF2\u8FD0\u884C ',
 	        React.createElement(
 	          'span',
 	          null,
 	          this.state.day
 	        ),
-	        ' 天 --- 总访问量',
+	        ' \u5929 --- \u603B\u8BBF\u95EE\u91CF',
 	        React.createElement(
 	          'span',
 	          null,
 	          window.pv
 	        ),
-	        '次'
+	        '\u6B21'
 	      )
 	    );
 	  }
@@ -717,25 +719,25 @@ webpackJsonp([1,5],{
 	module.exports = Footer;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ },
+/***/ }),
 
-/***/ 236:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 229:
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(237);
+	var content = __webpack_require__(230);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(216)(content, {});
+	var update = __webpack_require__(217)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Footer.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./Footer.scss");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/index.js!./Footer.scss", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/sass-loader/index.js!./Footer.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -744,12 +746,12 @@ webpackJsonp([1,5],{
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 237:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 230:
+/***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(215)();
+	exports = module.exports = __webpack_require__(216)();
 	// imports
 	
 	
@@ -759,25 +761,25 @@ webpackJsonp([1,5],{
 	// exports
 
 
-/***/ },
+/***/ }),
 
-/***/ 238:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 231:
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var timeDiff = __webpack_require__(239);
+	var timeDiff = __webpack_require__(232);
 	
 	var utils = { timeDiff: timeDiff };
 	
 	module.exports = utils;
 
-/***/ },
+/***/ }),
 
-/***/ 239:
-/***/ function(module, exports) {
+/***/ 232:
+/***/ (function(module, exports) {
 
-	'use strict'
+	'use strict';
 	
 	/**
 	  * startTime: xxxx-xx-xx
@@ -785,7 +787,6 @@ webpackJsonp([1,5],{
 	  * diffType: 'second' or 'minute' or 'hour' or 'day'
 	  */
 	
-	;
 	function GetDateDiff(startTime, endTime, diffType) {
 	  //xxxx-xx-xx transform to xxxx/xx/xx
 	  startTime = startTime.replace(/\-/g, "/");
@@ -797,8 +798,8 @@ webpackJsonp([1,5],{
 	  if (endTime === '') {
 	    eTime = new Date(); //if endTime id '' end time , new a endTime as now
 	  } else {
-	      eTime = new Date(endTime); // endTime
-	    }
+	    eTime = new Date(endTime); // endTime
+	  }
 	  var divNum = 1;
 	  switch (diffType) {
 	    case "second":
@@ -822,7 +823,7 @@ webpackJsonp([1,5],{
 	
 	module.exports = GetDateDiff;
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=1.bundle.js.map

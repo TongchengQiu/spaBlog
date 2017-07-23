@@ -1,26 +1,26 @@
-webpackJsonp([5,4],{
+webpackJsonp([5,10],{
 
-/***/ 213:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 241:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
-	var Home = React.createClass({
-	  displayName: "Home",
+	var Categories = React.createClass({
+	  displayName: "Categories",
 	
 	  render: function render() {
 	    return React.createElement(
 	      "div",
-	      { className: "home" },
-	      "Home"
+	      { className: "categories" },
+	      "Categories"
 	    );
 	  }
 	});
 	
-	module.exports = Home;
+	module.exports = Categories;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=5.bundle.js.map

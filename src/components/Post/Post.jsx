@@ -3,7 +3,7 @@ const Post = React.createClass({
   render: function() {
     return (
       <div className="post">
-        Post
+        Post{this.props.params.postId}
       </div>
     );
   }

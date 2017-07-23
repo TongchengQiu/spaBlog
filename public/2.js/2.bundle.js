@@ -1,7 +1,7 @@
-webpackJsonp([2,5],{
+webpackJsonp([2,10],{
 
-/***/ 215:
-/***/ function(module, exports) {
+/***/ 216:
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -55,10 +55,10 @@ webpackJsonp([2,5],{
 	};
 
 
-/***/ },
+/***/ }),
 
-/***/ 216:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 217:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -73,7 +73,7 @@ webpackJsonp([2,5],{
 			};
 		},
 		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 		}),
 		getHeadElement = memoize(function () {
 			return document.head || document.getElementsByTagName("head")[0];
@@ -273,7 +273,6 @@ webpackJsonp([2,5],{
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
-		var sourceMap = obj.sourceMap;
 	
 		if(media) {
 			styleElement.setAttribute("media", media)
@@ -291,7 +290,6 @@ webpackJsonp([2,5],{
 	
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
-		var media = obj.media;
 		var sourceMap = obj.sourceMap;
 	
 		if(sourceMap) {
@@ -310,14 +308,14 @@ webpackJsonp([2,5],{
 	}
 
 
-/***/ },
+/***/ }),
 
-/***/ 226:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 233:
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
-	__webpack_require__(251);
+	__webpack_require__(234);
 	var Home = React.createClass({
 	  displayName: 'Home',
 	
@@ -333,25 +331,25 @@ webpackJsonp([2,5],{
 	module.exports = Home;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ },
+/***/ }),
 
-/***/ 251:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 234:
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(252);
+	var content = __webpack_require__(235);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(216)(content, {});
+	var update = __webpack_require__(217)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Home.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Home.scss");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/index.js!./Home.scss", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/index.js!./Home.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -360,12 +358,12 @@ webpackJsonp([2,5],{
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 252:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 235:
+/***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(215)();
+	exports = module.exports = __webpack_require__(216)();
 	// imports
 	
 	
@@ -375,7 +373,7 @@ webpackJsonp([2,5],{
 	// exports
 
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=2.bundle.js.map

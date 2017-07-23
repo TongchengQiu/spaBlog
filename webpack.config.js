@@ -45,7 +45,7 @@ var config = {
   output: {
     path: path.join(__dirname, outputPath),
     filename: 'js/[name].bundle.js',
-    publicPath: isProduction()? 'http://******':'http://localhost:3000/',
+    publicPath: isProduction()? 'http://localhost:3000/':'http://localhost:3000/',
   },
   module: {
     loaders: [

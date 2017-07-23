@@ -1,26 +1,27 @@
-webpackJsonp([8,5],{
+webpackJsonp([8,10],{
 
 /***/ 247:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
-	var Categories = React.createClass({
-	  displayName: "Categories",
+	var Post = React.createClass({
+	  displayName: "Post",
 	
 	  render: function render() {
 	    return React.createElement(
 	      "div",
-	      { className: "categories" },
-	      "Categories"
+	      { className: "post" },
+	      "Post",
+	      this.props.params.postId
 	    );
 	  }
 	});
 	
-	module.exports = Categories;
+	module.exports = Post;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=8.bundle.js.map

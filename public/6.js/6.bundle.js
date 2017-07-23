@@ -1,7 +1,7 @@
-webpackJsonp([6,5],{
+webpackJsonp([6,10],{
 
 /***/ 243:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
@@ -20,7 +20,7 @@ webpackJsonp([6,5],{
 	module.exports = Tags;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=6.bundle.js.map

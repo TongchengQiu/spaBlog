@@ -1,7 +1,7 @@
-webpackJsonp([7,5],{
+webpackJsonp([7,10],{
 
 /***/ 245:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
 	
@@ -20,7 +20,7 @@ webpackJsonp([7,5],{
 	module.exports = Archives;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=7.bundle.js.map
